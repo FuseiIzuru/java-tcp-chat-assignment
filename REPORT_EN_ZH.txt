@@ -1,0 +1,11 @@
+Short Report / 简短报告
+
+English
+This program implements a concurrent TCP chat service with a console client. The server accepts each connection on a separate thread, while each client uses a background reader so that incoming messages do not block keyboard input. The server routes messages, reports joins and departures, and protects shared channel state with synchronization and concurrent collections.
+
+Both optional extensions are included. A super user authenticates with a server-configured password and can permanently ban a username; the ban list is saved to a local file. Two users can open a private channel with /private USER and return to public chat with /public. They receive each other's messages and public messages from users outside private pairs, while outsiders do not receive the pair's messages. This exercise applies Java TCP sockets, threads, text-stream I/O, synchronization, and connection lifecycle handling.
+
+中文翻译
+本程序实现了一个并发 TCP 聊天服务和控制台客户端。服务器为每个连接创建独立线程；客户端使用后台读取线程接收消息，因此接收消息不会阻塞键盘输入。服务器负责转发消息、通知用户加入和离开，并通过同步机制与并发集合保护共享频道状态。
+
+题目中的两个可选扩展均已实现。超级用户通过服务器配置的密码进行身份验证，并可永久封禁用户名；封禁名单会保存到本地文件。两名用户可用 /private USER 开启私聊，并用 /public 返回公聊。私聊双方可以互相收发消息，也能收到私聊组合以外用户的公聊消息；其他用户不会收到这两人的消息。本作业运用了 Java TCP Socket、线程、文本流输入输出、同步机制和连接生命周期处理。
